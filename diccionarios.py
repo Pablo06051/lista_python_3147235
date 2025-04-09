@@ -3,21 +3,21 @@ pais1 = {
     "capital":"bogota",
     "moneda":"peso_colombiano",
     
-    "ciudades" :{
-        "cordoba",
-        "bogota",
-        "medellin",
-                },
+    "ciudades" :[
+                    "cordoba",
+                    "bogota",
+                    "medellin",
+                ],
     "poblacion" :{
         "censo":46,
         "densidad":16,
         
-                }
-        }
+    }
+}
 #acceder a la informacion del pais 
 print (pais1["moneda"])
 print(pais1["capital"])
-print(pais1["ciudad"][1])
+print(pais1["ciudades"][1])
 print("...")
 # iterar las ciudades del pais uno
 for ciudad in pais1["ciudades"]:
@@ -97,11 +97,15 @@ for pais in paises :
     print ("capital:", pais ["capital"])
     print("poblacion:")
     print("- censo :",
-        pais ["poblacion "]["censo"],
+        pais ["poblacion"]["censo"],
         "millones")
     print ("densidad:",
         pais ["poblacion"]["densidad"],
         "por km2")
     print("......")
+    for ciudad in pais ["ciudades"]:
+        print("ciudad:", ciudad)
+    print("......")
+
 
 
